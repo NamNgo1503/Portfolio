@@ -6,71 +6,56 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SchoolIcon from "@material-ui/icons/School";
 import WorkIcon from "@material-ui/icons/Work";
+import backgroundImage from "../assets/light.jpg";
+import "../styles/Experience.css";
 
 function Experience() {
   return (
-    <div className="experience">
-      <VerticalTimeline lineColor="#3e497a">
+    <div className="experience-container" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="experience" style={{ marginTop: '160px' }}>
+      <VerticalTimeline lineColor="#131313">
         <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2010 - 2014"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: '#131313', color: '#BCB4A7' }}
+          contentArrowStyle={{
+            borderRight: "7px solid #131313",
+          }}
+          date="2019 - 2023"
+          iconStyle={{ background: "#131313", color: "#BCB4A7", borderColor: "#BCB4A7"}}
           icon={<SchoolIcon />}
         >
-          <h3 className="vertical-timeline-element-title">
-            My Random High School, Random Place, Random State
+          <h3 className="vertical-timeline-element-title" >
+            Northern Kentucky University
           </h3>
-          <p> High School Diploma</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          date="2014 - 2018"
-          iconStyle={{ background: "#3e497a", color: "#fff" }}
-          icon={<SchoolIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            My Cool University, Vancouver, British Columbia
-          </h3>
-
           <h4 className="vertical-timeline-element-subtitle">
             Bachelor's Degree
           </h4>
 
           <p> Computer Science</p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          date="2018 - 2020"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
-          icon={<WorkIcon />}
-        >
-          <h3 className="vertical-timeline-element-title">
-            Back End Engineer - Google
-          </h3>
-          <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
-          </h4>
-          <p>Developed the backend infrastructure for 3 projects.</p>
-        </VerticalTimelineElement>
 
+        </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          date="2020 - present"
-          iconStyle={{ background: "#e9d35b", color: "#fff" }}
+          contentStyle={{ background: '#131313', color: '#BCB4A7'}}
+          contentArrowStyle={{
+            borderRight: "7px solid #131313",
+          }}
+          date="2023 - Now"
+          iconStyle={{ background: "#131313", color: "#BCB4A7" }}
           icon={<WorkIcon />}
         >
           <h3 className="vertical-timeline-element-title">
-            Full Stack Engineer - Twitch
+            Intern Web Developer - Saolasoft Inc.
           </h3>
+
           <h4 className="vertical-timeline-element-subtitle">
-            San Francisco, CA
+            Denver, CO
           </h4>
-          <p>
-            Helped the team launch 2 major features by working both in the front
-            end and back end.
-          </p>
+
+          <p> Developed and enhanced websites</p>
         </VerticalTimelineElement>
       </VerticalTimeline>
+    </div>
     </div>
   );
 }

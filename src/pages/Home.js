@@ -3,39 +3,30 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
 import GithubIcon from "@material-ui/icons/GitHub";
 import "../styles/Home.css";
+import backgroundImage from "../assets/photo.jpg";
 
 function Home() {
   return (
     <div className="home">
-      <div className="about">
-        <h2> Hi, My Name is Pedro</h2>
+      <div className="about" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="prompt">
-          <p>A software developer with a passion for learning and creating.</p>
-          <LinkedInIcon />
-          <EmailIcon />
-          <GithubIcon />
+          <p>I am Nam Ngo, a web developer with a passion for creating</p>
         </div>
       </div>
       <div className="skills">
-        <h1> Skills</h1>
+        <h1> Technical Skills</h1>
         <ol className="list">
           <li className="item">
-            <h2> Front-End</h2>
+            <h2> Programming</h2>
             <span>
-              ReactJS, Angular, Redux, HTML, CSS, React Native, Flutter, NPM,
-              Ionic, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
+            Java, Python, C++, C#, SQL, JavaScript, React, HTML, CSS
             </span>
           </li>
           <li className="item">
-            <h2>Back-End</h2>
+            <h2>Office</h2>
             <span>
-              NodeJS, Java Spring, .NET, ExpressJS, GraphQL, ApolloServer,
-              MySQL, MongoDB, DynamoDB, DigitalOcean, AWS S3, MS SQL
+            Microsoft Suites, OS, Linux, PowerShell, AI
             </span>
-          </li>
-          <li className="item">
-            <h2>Languages</h2>
-            <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
           </li>
         </ol>
       </div>

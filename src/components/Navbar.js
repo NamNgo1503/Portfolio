@@ -12,6 +12,16 @@ function Navbar() {
     setExpandNavbar(false);
   }, [location]);
 
+  useEffect(() => {
+    if (expandNavbar) {
+      // Disable scrolling when the navigation is expanded
+      document.body.style.overflow = "hidden";
+    } else {
+      // Enable scrolling when the navigation is collapsed
+      document.body.style.overflow = "auto";
+    }
+  }, [expandNavbar]);
+
   return (
     <div className="navbar" id={expandNavbar ? "open" : "close"}>
       <div className="toggleButton">
@@ -24,9 +34,10 @@ function Navbar() {
         </button>
       </div>
       <div className="links">
-        <Link to="/"> Home </Link>
-        <Link to="/projects"> Projects </Link>
+        <h2>NAM NGO</h2>
+        <Link to="/"> About </Link>
         <Link to="/experience"> Experience </Link>
+        <Link to="/projects" className="nav-link"> Projects </Link>
       </div>
     </div>
   );
